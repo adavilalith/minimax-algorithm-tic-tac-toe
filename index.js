@@ -7,7 +7,12 @@ const handleClick = (cell)=>{
         return;
     }
     console.log(cell)
+    if(board[cell]!=" "){
+      document.getElementById("msg").innerHTML="cell full"
+      return;
+    }
     if(turn%2==0){
+      document.getElementById("msg").innerHTML=""
         board[cell]="X"
         document.getElementById("c"+cell).innerHTML+="X"
         cell=bestMove()
