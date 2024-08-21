@@ -5,6 +5,9 @@
 This project is a simple Tic Tac Toe game implemented in HTML, CSS, and JavaScript. It features a bot powered by the Minimax algorithm, allowing you to play against an AI that makes optimal moves.
 The player is playing as X and the bot is playing as O. Can you best my bot?
 
+https://adavilalith.github.io/minimax-algorithm-tic-tac-toe/
+
+
 ![Tic Tac Toe Screenshot](https://github.com/user-attachments/assets/0dab2882-8af7-471e-9c12-3f4e9a3d6bf9)
 
 
