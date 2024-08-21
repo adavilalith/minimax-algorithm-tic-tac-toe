@@ -7,16 +7,16 @@ const handleClick = (cell)=>{
         return;
     }
     console.log(cell)
-    if(turn%2){
+    if(turn%2==0){
         board[cell]="X"
         document.getElementById("c"+cell).innerHTML+="X"
-    }
-    else{
+        cell=bestMove()
+        console.log("ai",cell)
         board[cell]="O"
         document.getElementById("c"+cell).innerHTML+="O"
     }
     let res = checkWinner();
-    if(res==1){
+    if(res==1||res==2){
         console.log("winner is ",((turn%2)?"X":"O"))
         document.getElementById("msg").innerHTML="winner is "+((turn%2)?"X":"O")
         running=false
@@ -26,7 +26,8 @@ const handleClick = (cell)=>{
         console.log("Tie")
         running=false
     }
-    turn+=1
+    turn+=2
+    console.log(board)
 } 
 
 const checkWinner = () => {
@@ -61,7 +62,7 @@ const checkWinner = () => {
       }
       
       if (Owin) {
-        return 1;
+        return 2;
       }
     }
     let fullCond = true;
