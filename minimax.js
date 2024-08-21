@@ -1,6 +1,6 @@
 const bestMove =()=>{
     let bestScore = -Infinity;
-    let move;
+    let move="nomove";
     for(let i=0;i<9;i++){
         if(board[i]==" "){
             board[i]="O";
