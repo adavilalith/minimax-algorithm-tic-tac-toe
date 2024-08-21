@@ -86,6 +86,7 @@ const checkWinner = () => {
 const reset = ()=>{
     for(let i=0;i<9;i++){
         document.getElementById("c"+i).innerHTML=" "
+        board[i]=" "
     }
     running=true
     document.getElementById("msg").innerHTML=""
