@@ -17,9 +17,12 @@ const handleClick = (cell)=>{
         document.getElementById("c"+cell).innerHTML+="X"
         cell=bestMove()
         console.log("ai",cell)
-        board[cell]="O"
-        document.getElementById("c"+cell).innerHTML+="O"
+        if(cell!="nomove"){
+          board[cell]="O"
+            document.getElementById("c"+cell).innerHTML+="O"
+        }
     }
+
     let res = checkWinner();
     if(res==1||res==2){
         console.log("winner is ",((turn%2)?"X":"O"))
